@@ -1,0 +1,23 @@
+/*Website Template by freewebsitetemplates.com*/
+
+head{
+    font-family: "Times New Roman", serif;
+	font-size: 14px;
+}
+.table_books {
+	align: center;
+
+}
+table {
+	width: 100%;
+    color: #2a2c29;
+    border-collapse: collapse;
+    background-color: #e4ebee;
+}
+.title_table{
+    color: #6f6f6f;
+	background-color: #c4c4c4;
+    font-family: Arial, serif;
+}
+
+

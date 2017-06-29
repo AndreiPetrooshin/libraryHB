@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="libraryhibernatemaven:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="library.hibernate.maven.war">
+      <element id="artifact" artifact-name="libraryhibernatemaven:war exploded" />
+    </root>
+  </artifact>
+</component>
