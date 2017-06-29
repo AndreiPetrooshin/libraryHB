@@ -12,7 +12,7 @@
 
 </br>
 </br>
-<%--FORMS--%>
+                                            <%--FORMS--%>
 <%--FROM TO SELECT--%>
 <form action="selectServlet.do" method="post">
     <input type="submit" value="Показать книги">
@@ -25,7 +25,13 @@
 <%--FORM TO DELETE THE BOOK--%>
 <form  action="deleteBook.do" method="post" >
     <input type="number"  name="id" placeholder="введите номер книги которую хотите удалить">
-    <input type="submit" value="Удалить книгу">
+    <input type="submit" value="Удалить">
+</form>
+
+<%--FORM TO SELECT BOOK BY ID--%>
+<form  action="getById.do" method="post" >
+    <input type="number"  name="id" placeholder="введите номер книги">
+    <input type="submit" value="Найти">
 </form>
 
 

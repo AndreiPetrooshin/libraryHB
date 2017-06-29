@@ -36,4 +36,14 @@
         <url-pattern>/addedPage.do</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>getById</servlet-name>
+        <servlet-class>controller.ServletGetById</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>getById</servlet-name>
+        <url-pattern>/getById.do</url-pattern>
+    </servlet-mapping>
+
 </web-app>
