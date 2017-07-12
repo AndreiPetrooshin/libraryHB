@@ -1,18 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <title>new Book</title>
 </head>
 <body>
 
-    <form action="/addedPage.do" method="post" >
-       <b> Книга: </b> <input type="text" required  name="bookName" placeholder="Введите название книниги"/> <br>
-       <b> Автор: </b> <input type="text" required  name="authorName" placeholder="Введите имя автора"/> <br>
-       <b> Краткое описание: </b> <input type="text" name="description" placeholder="Описание книги"/> <br>
-       <b> Год выпуска: </b> <input type="number" name="year" placeholder="Укажите год выпуска книги"/> <br>
-        <input type="submit" value="Добавить книгу">
-    </form>
+<form action="books.do" method="post">
+    <input name="action" value="addBook" hidden="hidden">
+    <b> Книга: </b>
+    <input type="text" required name="bookName" placeholder="Введите название книниги"/> <br>
+    <b> Автор: </b>
+    <input type="text" required name="authorName" placeholder="Введите имя автора"/> <br>
+    <b> Краткое описание: </b>
+    <input type="text" name="description" placeholder="Описание книги"/> <br>
+    <b> Год выпуска: </b>
+    <input type="number" name="year" placeholder="Укажите год выпуска книги"/> <br>
+
+
+    <input type="submit" value="Добавить книгу">
+</form>
 
 </body>
 </html>

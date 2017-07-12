@@ -12,31 +12,33 @@
 
 </br>
 </br>
-                                            <%--FORMS--%>
-<%--FROM TO SELECT--%>
-<form action="selectServlet.do" method="post">
-    <input type="submit" value="Показать книги">
-</form>
-
+<%--FORMS--%>
+<%--Ref TO SELECT--%>
+<button>
+    <a href="books.do?action=selectAllFields">Показать книги</a>
+</button>
 <%--FORM TO ADD BOOK--%>
-<button><a href="addForm.html" >Добавить новую книгу </a> </button>
+
+<button><a href="addForm.html">Добавить новую книгу </a></button>
 
 
 <%--FORM TO DELETE THE BOOK--%>
-<form  action="deleteBook.do" method="post" >
-    <input type="number"  name="id" placeholder="введите номер книги которую хотите удалить">
+<form action="books.do" method="post">
+    <input type="number" name="id" placeholder="введите номер книги которую хотите удалить">
     <input type="submit" value="Удалить">
+    <input name="action" value="deleteById" hidden="hidden">
 </form>
 
 <%--FORM TO SELECT BOOK BY ID--%>
-<form  action="getById.do" method="post" >
-    <input type="number"  name="id" placeholder="введите номер книги">
+<form action="books.do" method="get">
+    <input type="number" name="id" placeholder="введите номер книги">
     <input type="submit" value="Найти">
+    <input name="action" value="findById" hidden="hidden">
 </form>
 
 
 <div class="table_books">
-    <table >
+    <table>
 
         <thead class="title_table">
         <tr>

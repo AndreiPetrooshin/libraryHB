@@ -6,44 +6,18 @@
 
 
 
+
+
     <servlet>
-        <servlet-name>SelectServ</servlet-name>
-        <servlet-class>controller.ServletSelectAll</servlet-class>
+        <servlet-name>BookServlet</servlet-name>
+        <servlet-class>controller.ServletForBooks</servlet-class>
     </servlet>
 
     <servlet-mapping>
-        <servlet-name>SelectServ</servlet-name>
-        <url-pattern>/selectServlet.do</url-pattern>
+        <servlet-name>BookServlet</servlet-name>
+        <url-pattern>/books.do</url-pattern>
     </servlet-mapping>
 
-    <servlet>
-        <servlet-name>DeleteBook</servlet-name>
-        <servlet-class>controller.ServletDeleteBook</servlet-class>
-    </servlet>
 
-    <servlet-mapping>
-        <servlet-name>DeleteBook</servlet-name>
-        <url-pattern>/deleteBook.do</url-pattern>
-    </servlet-mapping>
-
-    <servlet>
-        <servlet-name>AddingBookServlet</servlet-name>
-        <servlet-class>controller.ServletAddBook</servlet-class>
-    </servlet>
-
-    <servlet-mapping>
-        <servlet-name>AddingBookServlet</servlet-name>
-        <url-pattern>/addedPage.do</url-pattern>
-    </servlet-mapping>
-
-    <servlet>
-        <servlet-name>getById</servlet-name>
-        <servlet-class>controller.ServletGetById</servlet-class>
-    </servlet>
-
-    <servlet-mapping>
-        <servlet-name>getById</servlet-name>
-        <url-pattern>/getById.do</url-pattern>
-    </servlet-mapping>
 
 </web-app>

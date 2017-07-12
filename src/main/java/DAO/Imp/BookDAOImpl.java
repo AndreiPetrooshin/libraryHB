@@ -1,24 +1,24 @@
 package DAO.Imp;
 
-import DAO.BookDAO;
+import DAO.EntityDAO;
+import DAO.EntityUtil;
 import models.Books;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
-import javax.persistence.PersistenceUnit;
+
+
 import java.util.List;
 
 /**
  * Created by draqo on 27.06.2017.
  */
-public class BookDAOImpl implements BookDAO {
-    @PersistenceUnit
-    private static EntityManagerFactory entityManagerFactory =
-            Persistence.createEntityManagerFactory("CRM");
+public class BookDAOImpl implements EntityDAO<Books> {
+
+    private static EntityManagerFactory entityManagerFactory = EntityUtil.getInstance();
 
 
-    public  void addBook(Books book) {
+    public  void addEntity(Books book) {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         try{
             entityManager.getTransaction().begin();
@@ -31,7 +31,7 @@ public class BookDAOImpl implements BookDAO {
     }
 
 
-    public void deleteBook(int id) {
+    public void deleteEntity(int id) {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         try{
             entityManager.getTransaction().begin();
@@ -45,7 +45,7 @@ public class BookDAOImpl implements BookDAO {
     }
 
 
-    public List<Books> getAllBooks() {
+    public List<Books> getAllElements() {
         EntityManager entityManager =  entityManagerFactory.createEntityManager();
         try{
             entityManager.getTransaction().begin();
@@ -60,7 +60,7 @@ public class BookDAOImpl implements BookDAO {
     }
 
 
-    public Books getBookbyId(int id) {
+    public Books getById(int id) {
             EntityManager entityManager  =entityManagerFactory.createEntityManager();
             try{
                 entityManager.getTransaction().begin();
