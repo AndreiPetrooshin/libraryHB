@@ -36,6 +36,9 @@
     <input name="action" value="findById" hidden="hidden">
 </form>
 
+        <br/>
+        <c:out value="${exception}"/>
+
 
 <div class="table_books">
     <table>

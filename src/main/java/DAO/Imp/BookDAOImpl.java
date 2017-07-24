@@ -17,6 +17,23 @@ public class BookDAOImpl implements EntityDAO<Books> {
 
     private static EntityManagerFactory entityManagerFactory = EntityUtil.getInstance();
 
+    private static EntityDAO<Books> instance;
+
+    private BookDAOImpl(){
+
+    }
+
+    public static EntityDAO<Books> getInstance(){
+        if (instance == null){
+            instance = new BookDAOImpl();
+        }
+
+        return instance;
+
+    }
+
+
+
 
     public  void addEntity(Books book) {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
@@ -68,6 +85,9 @@ public class BookDAOImpl implements EntityDAO<Books> {
                       ("FROM Books where idbooks=" + id).getSingleResult();
               entityManager.getTransaction().commit();
               return book;
+            }
+            catch (Exception e){
+                return null;
             }
             finally {
                 entityManager.close();
